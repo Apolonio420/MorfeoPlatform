@@ -13,7 +13,7 @@ import path from "node:path";
 
 const filePath = path.join(__dirname, "tunnel_url.txt");
 fs.writeFileSync(filePath, tunnel.url, "utf8");
-
+  
 process.on("exit", () => {
 	tunnel.close();
 	// console.log("Tunnel closed due to process exit.");
